@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWings Airlines | Fly Beyond Imagination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-plane"></i> SkyWings
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#destinations">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#tropical">Tropical</a></li>
+                        <li><a href="#islands">Islands</a></li>
+                        <li><a href="#winter">Winter</a></li>
+                    </ul>
+                </li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#book" class="btn">Book Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videoja.mp4" type="video/mp4">
+               
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="SkyWings Airlines">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>Discover the World with SkyWings</h1>
+            <p>Experience luxury travel to over 120 destinations worldwide</p>
+            <a href="#book" class="btn btn-large">Book Your Flight</a>
+        </div>
+    </section>
+    
+    <section class="featured-destinations" id="featured">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="destination-grid" id="featuredDestinations">
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="destination-categories">
+        <div class="category-section tropical" id="tropical">
+            <div class="container">
+                <h2>Tropical Getaways</h2>
+                <div class="category-grid" id="tropicalDestinations">
+                </div>
+                <button class="btn btn-large modal-trigger" data-destination="tropical">Explore Tropical</button>
+            </div>
+        </div>
+
+
+        <div class="category-section islands" id="islands">
+            <div class="container">
+                <h2>Island Paradises</h2>
+                <div class="category-grid" id="islandDestinations">
+                </div>
+                <button class="btn btn-large modal-trigger" data-destination="islands">Explore Islands</button>
+            </div>
+        </div>
+
+
+        <div class="category-section winter" id="winter">
+            <div class="container">
+                <h2>Winter Wonderlands</h2>
+                <div class="category-grid" id="winterDestinations">
+                </div>
+                <button class="btn btn-large modal-trigger" data-destination="winter">Explore Winter</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="special-offers" id="deals">
+        <div class="container">
+            <h2>Special Offers</h2>
+            <div class="offer-grid" id="specialOffers">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="flight-experience" id="experience">
+        <div class="container">
+            <h2>Our Flight Experience</h2>
+            <div class="experience-grid" id="flightExperience">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Travelers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The flight was incredibly comfortable and the service was exceptional. Will definitely fly with SkyWings again!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>New York to Paris</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Best airline I've flown with! The premium economy seats were worth every penny for the long flight to Tokyo.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <span>Los Angeles to Tokyo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>SkyWings made our family vacation stress-free. The kids loved the entertainment options!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Emma Rodriguez">
+                        <div>
+                            <h4>Emma Rodriguez</h4>
+                            <span>Miami to Hawaii</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mini-hero-section">
+        <div class="container">
+            <div class="mini-hero-grid">
+                <div class="mini-hero-card" style="background-image: url('https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                    <div class="mini-hero-content">
+                        <h2>Paris</h2>
+                        <p>The City of Light and Love, famous for its art, fashion, and cuisine.</p>
+                        <button class="btn btn-small modal-trigger" data-destination="paris">Learn More</button>
+                    </div>
+                </div>
+                <div class="mini-hero-card" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                    <div class="mini-hero-content">
+                        <h2>Luxury Escapes</h2>
+                        <p>Experience the world's most exclusive destinations in style.</p>
+                        <button class="btn btn-small modal-trigger" data-destination="luxury">Learn More</button>
+                    </div>
+                </div>
+                <div class="mini-hero-card" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80')">
+                    <div class="mini-hero-content">
+                        <h2>Hidden Gems</h2>
+                        <p>Discover breathtaking destinations off the beaten path.</p>
+                        <button class="btn btn-small modal-trigger" data-destination="hidden-gems">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="travel-tips">
+        <div class="container">
+            <h2>Travel Tips & Guides</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Packing Tips">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Packing Like a Pro</h3>
+                        <p>Essential tips for packing efficiently for any trip duration.</p>
+                        <a href="#" class="btn btn-small">Read More</a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="Airport Hacks">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Airport Hacks</h3>
+                        <p>Navigate airports like a seasoned traveler with these insider tips.</p>
+                        <a href="#" class="btn btn-small">Read More</a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Local Cuisine">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Local Cuisine Guide</h3>
+                        <p>Must-try foods in our top destinations around the world.</p>
+                        <a href="#" class="btn btn-small">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive deals and updates</p>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="book-section" id="book">
+        <div class="container">
+            <h2>Book Your Flight</h2>
+            <div class="booking-container">
+                <div class="booking-form">
+                    <form id="flightBookingForm">
+                        <div class="form-group">
+                            <label for="trip-type">Trip Type</label>
+                            <select id="trip-type" required>
+                                <option value="">Select trip type</option>
+                                <option value="roundtrip">Round Trip</option>
+                                <option value="oneway">One Way</option>
+                                <option value="multicity">Multi-City</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="from">From</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                    <input type="text" id="from" placeholder="City or Airport" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">To</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-plane-arrival"></i>
+                                    <input type="text" id="to" placeholder="City or Airport" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Departure Date</label>
+                                <div class="input-with-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input type="date" id="departure" required>
+                                </div>
+                            </div>
+                            <div class="form-group return-date-group">
+                                <label for="return">Return Date</label>
+                                <div class="input-with-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input type="date" id="return">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="passengers">Passengers</label>
+                                <div class="passenger-selector">
+                                    <div class="passenger-type">
+                                        <label>Adults (12+)</label>
+                                        <div class="passenger-controls">
+                                            <button type="button" class="passenger-btn minus" data-type="adults">-</button>
+                                            <input type="number" id="adults" value="1" min="1" max="10">
+                                            <button type="button" class="passenger-btn plus" data-type="adults">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-type">
+                                        <label>Children (2-11)</label>
+                                        <div class="passenger-controls">
+                                            <button type="button" class="passenger-btn minus" data-type="children">-</button>
+                                            <input type="number" id="children" value="0" min="0" max="10">
+                                            <button type="button" class="passenger-btn plus" data-type="children">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-type">
+                                        <label>Infants (<2)</label>
+                                        <div class="passenger-controls">
+                                            <button type="button" class="passenger-btn minus" data-type="infants">-</button>
+                                            <input type="number" id="infants" value="0" min="0" max="10">
+                                            <button type="button" class="passenger-btn plus" data-type="infants">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="class">Class</label>
+                                <div class="class-selector">
+                                    <div class="class-option" data-value="economy">
+                                        <i class="fas fa-chair"></i>
+                                        <span>Economy</span>
+                                    </div>
+                                    <div class="class-option" data-value="premium">
+                                        <i class="fas fa-couch"></i>
+                                        <span>Premium</span>
+                                    </div>
+                                    <div class="class-option" data-value="business">
+                                        <i class="fas fa-business-time"></i>
+                                        <span>Business</span>
+                                    </div>
+                                    <div class="class-option" data-value="first">
+                                        <i class="fas fa-crown"></i>
+                                        <span>First</span>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="class" value="economy">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="promo">Promo Code (Optional)</label>
+                            <input type="text" id="promo" placeholder="Enter promo code">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-large">
+                            <i class="fas fa-search"></i> Search Flights
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="booking-features">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Flexible Booking</h3>
+                        <p>Change your plans with no fees up to 24 hours before departure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>SkyWings Rewards</h3>
+                        <p>Earn miles on every flight and redeem for free trips.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Our customer service team is always available to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SkyWings</h3>
+                    <p>Fly Beyond Imagination</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#featured">Destinations</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#book">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Travel Alerts</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +383 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> contact@skywings.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Vushtrri , Kosovo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> SkyWings Airlines. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+    <div class="modal" id="parisModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                <h2>Paris, France</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-plane"></i>
+                        <h4>Flight Duration</h4>
+                        <p>7 hours from NYC</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Average Price</h4>
+                        <p>$499 - $899</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time to Visit</h4>
+                        <p>April - June</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-language"></i>
+                        <h4>Language</h4>
+                        <p>French</p>
+                    </div>
+                </div>
+                
+                <h3>Top Attractions</h3>
+                <ul>
+                    <li>Eiffel Tower</li>
+                    <li>Louvre Museum</li>
+                    <li>Notre-Dame Cathedral</li>
+                    <li>Champs-Élysées</li>
+                    <li>Montmartre</li>
+                </ul>
+                
+                <a href="#book" class="btn btn-large">Book Flight to Paris</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="luxuryModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                <h2>Luxury Escapes</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Experience the pinnacle of luxury travel with our exclusive collection of the world's most opulent destinations. From private island resorts to five-star urban retreats, we've curated the ultimate in high-end travel experiences.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-hotel"></i>
+                        <h4>Top Resorts</h4>
+                        <p>Burj Al Arab, Dubai</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h4>Private Islands</h4>
+                        <p>Maldives, Seychelles</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-ship"></i>
+                        <h4>Luxury Cruises</h4>
+                        <p>Mediterranean</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h4>VIP Services</h4>
+                        <p>24/7 Concierge</p>
+                    </div>
+                </div>
+                
+                <h3>Exclusive Experiences</h3>
+                <ul>
+                    <li>Private yacht charters</li>
+                    <li>Helicopter transfers</li>
+                    <li>Michelin-star dining</li>
+                    <li>Personal butler service</li>
+                    <li>Private guided tours</li>
+                </ul>
+                
+                <a href="#book" class="btn btn-large">Book Luxury Escape</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="hiddenGemsModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80')">
+                <h2>Hidden Gems</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Discover breathtaking destinations off the beaten path with our collection of hidden gems. These lesser-known locations offer authentic experiences away from the crowds, perfect for travelers seeking something truly special.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Top Locations</h4>
+                        <p>Faroe Islands</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-mountain"></i>
+                        <h4>Natural Wonders</h4>
+                        <p>Zhangjiajie, China</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-archway"></i>
+                        <h4>Cultural Treasures</h4>
+                        <p>Bhutan</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Crowd Factor</h4>
+                        <p>Low</p>
+                    </div>
+                </div>
+                
+                <h3>Why Choose Hidden Gems?</h3>
+                <ul>
+                    <li>Authentic local experiences</li>
+                    <li>Minimal tourist crowds</li>
+                    <li>Unique photo opportunities</li>
+                    <li>Lower prices than popular spots</li>
+                    <li>Chance to discover something new</li>
+                </ul>
+                
+                <a href="#book" class="btn btn-large">Explore Hidden Gems</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="tropicalModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')">
+                <h2>Tropical Getaways</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Escape to paradise with our selection of tropical destinations. From the crystal-clear waters of the Maldives to the lush jungles of Bali, these destinations offer the perfect mix of relaxation and adventure.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-sun"></i>
+                        <h4>Average Temperature</h4>
+                        <p>75°F - 90°F</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h4>Best Beaches</h4>
+                        <p>White sand, turquoise waters</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time to Visit</h4>
+                        <p>Year-round</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Price Range</h4>
+                        <p>$899 - $1999</p>
+                    </div>
+                </div>
+                
+                <h3>Popular Tropical Destinations</h3>
+                <div class="destination-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Maldives</h3>
+                                <p>From $1299</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1388&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Bali</h3>
+                                <p>From $1099</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Hawaii</h3>
+                                <p>From $899</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+                
+                <a href="#book" class="btn btn-large">Book Tropical Getaway</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="islandsModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80')">
+                <h2>Island Paradises</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Discover the world's most beautiful island destinations with SkyWings. From the Greek islands to tropical atolls, these paradises offer stunning scenery, rich cultures, and unforgettable experiences.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-water"></i>
+                        <h4>Ocean Views</h4>
+                        <p>360° water vistas</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h4>Beach Quality</h4>
+                        <p>Pristine, award-winning</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time to Visit</h4>
+                        <p>Spring & Fall</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Price Range</h4>
+                        <p>$699 - $1599</p>
+                    </div>
+                </div>
+                
+                <h3>Popular Island Destinations</h3>
+                <div class="destination-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Santorini</h3>
+                                <p>From $799</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Seychelles</h3>
+                                <p>From $1199</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Phuket</h3>
+                                <p>From $699</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+                
+                <a href="#book" class="btn btn-large">Book Island Paradise</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="winterModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80')">
+                <h2>Winter Wonderlands</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Experience the magic of winter with our selection of snowy destinations. From world-class ski resorts to charming winter villages, these locations offer breathtaking scenery and exciting activities.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-snowflake"></i>
+                        <h4>Snow Conditions</h4>
+                        <p>Powder perfect</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-skiing"></i>
+                        <h4>Winter Sports</h4>
+                        <p>Skiing, snowboarding</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time to Visit</h4>
+                        <p>December - March</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Price Range</h4>
+                        <p>$599 - $1299</p>
+                    </div>
+                </div>
+                
+                <h3>Popular Winter Destinations</h3>
+                <div class="destination-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Switzerland</h3>
+                                <p>From $899</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Banff</h3>
+                                <p>From $599</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Alaska</h3>
+                                <p>From $499</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+                
+                <a href="#book" class="btn btn-large">Book Winter Getaway</a>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="modal" id="featuredModal">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                <h2>Featured Destinations</h2>
+                <div class="close-modal">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Explore our most popular destinations that offer something for every traveler. From iconic cities to breathtaking natural wonders, these featured locations are perfect for your next adventure.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>Continents</h4>
+                        <p>5 continents covered</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Price Range</h4>
+                        <p>$399 - $1299</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time to Visit</h4>
+                        <p>Year-round options</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Travel Types</h4>
+                        <p>Solo, family, couples</p>
+                    </div>
+                </div>
+                
+                <h3>Popular Featured Destinations</h3>
+                <div class="destination-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Paris</h3>
+                                <p>From $499</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80');">
+                            <div class="destination-overlay">
+                                <h3>Tokyo</h3>
+                                <p>From $899</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                    <div class="destination-card">
+                        <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                            <div class="destination-overlay">
+                                <h3>New York</h3>
+                                <p>From $399</p>
+                            </div>
+                        </div>
+                        <a href="#book" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+                
+                <a href="#book" class="btn btn-large">Book Featured Destination</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"   >
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
